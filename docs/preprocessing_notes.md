@@ -36,3 +36,13 @@ Tutorials typically list these steps:
 4. Fixed bounds 10 to 10,000 characters — defensible in plain language. Anything shorter than 10 isn't a real message; anything longer is usually attachment corruption.
 5. Numbers worth remembering:
 6. After preprocessing: 13,153 messages. 8,983 ham, 2,504 spam, 1,666 phishing. Crosstab still has all six channel × label cells filled. SMS phishing is the smallest class at 277 — this is now my main worry going forward.
+
+See handwritten notebook for full reasoning.
+
+Key numbers:
+- Input: 19,092 combined rows
+- Output: 13,153 cleaned rows
+- Lost 263 to length filter (10 to 10,000 chars)
+- Lost 5,676 to deduplication
+- 4,933 of those duplicates were Mishra/UCI overlap
+- SMS phishing: 638 → 277 — smallest class, ongoing concern
