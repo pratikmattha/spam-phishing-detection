@@ -1,0 +1,29 @@
+[
+  {
+    "model": "MultinomialNB",
+    "macro_f1": 0.9193,
+    "weighted_f1": 0.9458,
+    "per_channel_f1": {
+      "sms": 0.7295,
+      "email": 0.9611
+    }
+  },
+  {
+    "model": "LogisticRegression",
+    "macro_f1": 0.9259,
+    "weighted_f1": 0.9507,
+    "per_channel_f1": {
+      "sms": 0.7711,
+      "email": 0.9591
+    }
+  },
+  {
+    "model": "LinearSVC",
+    "macro_f1": 0.9394,
+    "weighted_f1": 0.9627,
+    "per_channel_f1": {
+      "sms": 0.7815,
+      "email": 0.9732
+    }
+  }
+]
