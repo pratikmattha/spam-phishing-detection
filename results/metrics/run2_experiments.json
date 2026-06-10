@@ -1,0 +1,100 @@
+{
+  "E0_baseline_word": {
+    "LogReg_bal": {
+      "macro_f1": 0.9456,
+      "phishing_precision": 0.9437,
+      "phishing_recall": 0.9253,
+      "sms_macro_f1": 0.8006,
+      "email_macro_f1": 0.9749,
+      "sms_phishing_recall": 0.5676
+    },
+    "LinearSVC_bal": {
+      "macro_f1": 0.947,
+      "phishing_precision": 0.9435,
+      "phishing_recall": 0.9221,
+      "sms_macro_f1": 0.8239,
+      "email_macro_f1": 0.9707,
+      "sms_phishing_recall": 0.5946
+    }
+  },
+  "E1_years_stripped": {
+    "LogReg_bal": {
+      "macro_f1": 0.9423,
+      "phishing_precision": 0.9371,
+      "phishing_recall": 0.9188,
+      "sms_macro_f1": 0.7934,
+      "email_macro_f1": 0.9714,
+      "sms_phishing_recall": 0.5405
+    },
+    "LinearSVC_bal": {
+      "macro_f1": 0.9449,
+      "phishing_precision": 0.9371,
+      "phishing_recall": 0.9188,
+      "sms_macro_f1": 0.8207,
+      "email_macro_f1": 0.9687,
+      "sms_phishing_recall": 0.5946
+    }
+  },
+  "E2_char_ngrams": {
+    "LogReg_bal": {
+      "macro_f1": 0.9241,
+      "phishing_precision": 0.9118,
+      "phishing_recall": 0.9058,
+      "sms_macro_f1": 0.7869,
+      "email_macro_f1": 0.9503,
+      "sms_phishing_recall": 0.5946
+    },
+    "LinearSVC_bal": {
+      "macro_f1": 0.9392,
+      "phishing_precision": 0.9486,
+      "phishing_recall": 0.8994,
+      "sms_macro_f1": 0.8112,
+      "email_macro_f1": 0.9627,
+      "sms_phishing_recall": 0.5946
+    }
+  },
+  "E3_word_plus_char": {
+    "LogReg_bal": {
+      "macro_f1": 0.9524,
+      "phishing_precision": 0.9406,
+      "phishing_recall": 0.9253,
+      "sms_macro_f1": 0.8239,
+      "email_macro_f1": 0.9791,
+      "sms_phishing_recall": 0.6216
+    },
+    "LinearSVC_bal": {
+      "macro_f1": 0.9569,
+      "phishing_precision": 0.9535,
+      "phishing_recall": 0.9318,
+      "sms_macro_f1": 0.8324,
+      "email_macro_f1": 0.9818,
+      "sms_phishing_recall": 0.6216
+    }
+  },
+  "E4_complement_nb": {
+    "LogReg_bal": {
+      "macro_f1": 0.9456,
+      "phishing_precision": 0.9437,
+      "phishing_recall": 0.9253,
+      "sms_macro_f1": 0.8006,
+      "email_macro_f1": 0.9749,
+      "sms_phishing_recall": 0.5676
+    },
+    "LinearSVC_bal": {
+      "macro_f1": 0.947,
+      "phishing_precision": 0.9435,
+      "phishing_recall": 0.9221,
+      "sms_macro_f1": 0.8239,
+      "email_macro_f1": 0.9707,
+      "sms_phishing_recall": 0.5946
+    },
+    "ComplementNB": {
+      "macro_f1": 0.904,
+      "phishing_precision": 0.8549,
+      "phishing_recall": 0.8994,
+      "sms_macro_f1": 0.6598,
+      "email_macro_f1": 0.9629,
+      "sms_phishing_recall": 0.3243
+    }
+  }
+}
