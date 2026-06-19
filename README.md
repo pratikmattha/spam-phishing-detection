@@ -16,7 +16,6 @@ This is an MSc dissertation project at **Trinity College Dublin**, School of Com
 | | |
 |---|---|
 | **Author** | Pratik Pramod Mattha |
-| **Supervisor** | Dr. Van-Dinh Nguyen |
 | **Programme** | MSc Computer Science — Future Networked Systems |
 | **Institution** | Trinity College Dublin |
 
