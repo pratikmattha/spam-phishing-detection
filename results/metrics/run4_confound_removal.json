@@ -1,0 +1,142 @@
+{
+  "A_with_confounds": {
+    "macro_f1": 0.9547,
+    "phishing_precision": 0.9474,
+    "phishing_recall": 0.9351,
+    "sms_macro_f1": 0.8448,
+    "email_macro_f1": 0.9774,
+    "sms_phishing_recall": 0.6757
+  },
+  "B_confounds_stripped": {
+    "macro_f1": 0.9497,
+    "phishing_precision": 0.9318,
+    "phishing_recall": 0.9318,
+    "sms_macro_f1": 0.8252,
+    "email_macro_f1": 0.9755,
+    "sms_phishing_recall": 0.6486
+  },
+  "top_phishing_A": [
+    [
+      "word:utf",
+      2.585
+    ],
+    [
+      "word:https",
+      2.162
+    ],
+    [
+      "word:jose",
+      1.818
+    ],
+    [
+      "word:2024",
+      1.674
+    ],
+    [
+      "word:monkey",
+      1.665
+    ],
+    [
+      "char:202",
+      1.594
+    ],
+    [
+      "word:payment",
+      1.565
+    ],
+    [
+      "word:2025",
+      1.538
+    ],
+    [
+      "word:monkey org",
+      1.424
+    ],
+    [
+      "word:2023",
+      1.396
+    ],
+    [
+      "word:attached",
+      1.309
+    ],
+    [
+      "word:team",
+      1.175
+    ],
+    [
+      "word:account",
+      1.146
+    ],
+    [
+      "char: 202",
+      1.14
+    ],
+    [
+      "word:nokia",
+      1.129
+    ]
+  ],
+  "top_phishing_B": [
+    [
+      "char: . ",
+      2.48
+    ],
+    [
+      "word:https",
+      2.295
+    ],
+    [
+      "char: @ ",
+      1.84
+    ],
+    [
+      "word:payment",
+      1.427
+    ],
+    [
+      "word:team",
+      1.33
+    ],
+    [
+      "word:attached",
+      1.321
+    ],
+    [
+      "word:c3",
+      1.259
+    ],
+    [
+      "word:paypal",
+      1.103
+    ],
+    [
+      "word:update",
+      1.072
+    ],
+    [
+      "word:reserved",
+      1.065
+    ],
+    [
+      "custom:has_shortened_url",
+      1.064
+    ],
+    [
+      "word:rights reserved",
+      1.061
+    ],
+    [
+      "word:dear",
+      1.057
+    ],
+    [
+      "word:account",
+      1.05
+    ],
+    [
+      "custom:has_url",
+      1.039
+    ]
+  ]
+}
