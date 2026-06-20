@@ -34,6 +34,21 @@ SHORTCODE_PATTERN = re.compile(r"\b\d{5,6}\b")
 # Currency symbols
 CURRENCY_PATTERN = re.compile("[$\u00a3\u20ac]")
 
+# --- deeper URL-structure patterns (phishing-specific) ---
+
+# Grab the URLs themselves so we can analyse their structure
+URL_GRAB = re.compile(r"(https?://[^\s]+|www\.[^\s]+|\b[a-z0-9.-]+\.(?:com|net|org|uk|io|co|info|biz|tk|xyz|top|ml|ga)\b)")
+
+# IP-based URL: a link whose host is raw numbers (1.2.3.4) instead of a name
+IP_URL_PATTERN = re.compile(r"https?://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
+
+# Suspicious / commonly-abused top-level domains
+SUSPICIOUS_TLD_PATTERN = re.compile(r"\.(tk|xyz|top|ml|ga|gq|cf|buzz|club|work)\b")
+
+# Lookalike domain: a word that mixes letters with digits used as letters
+# (paypa1, g00gle, amaz0n) - a letter-run containing 0 or 1 standing in for o/l
+LOOKALIKE_PATTERN = re.compile(r"\b[a-z]*[a-z][01][a-z]*[a-z]\b")
+
 
 def extract_features(text):
     """
@@ -62,6 +77,15 @@ def extract_features(text):
     exclamation_count = text.count("!")
     currency_count = len(CURRENCY_PATTERN.findall(text))
 
+    # --- deeper URL-structure features ---
+    grabbed_urls = [u[0] if isinstance(u, tuple) else u for u in URL_GRAB.findall(text)]
+    longest_url_len = max((len(u) for u in grabbed_urls), default=0)
+    has_ip_url = 1 if IP_URL_PATTERN.search(text) else 0
+    has_suspicious_tld = 1 if SUSPICIOUS_TLD_PATTERN.search(text) else 0
+    has_lookalike = 1 if LOOKALIKE_PATTERN.search(text) else 0
+    # max dots in any single URL (proxy for excessive subdomains)
+    max_url_dots = max((u.count(".") for u in grabbed_urls), default=0)
+    
     return {
         "url_count": url_count,
         "has_url": has_url,
@@ -71,8 +95,12 @@ def extract_features(text):
         "capital_ratio": round(capital_ratio, 4),
         "exclamation_count": exclamation_count,
         "currency_count": currency_count,
+        "has_ip_url": has_ip_url,
+        "has_suspicious_tld": has_suspicious_tld,
+        "has_lookalike": has_lookalike,
+        "longest_url_len": longest_url_len,
+        "max_url_dots": max_url_dots,
     }
-    
     
 def main():
     """Test the extractor on a few example messages so we can see each feature fire."""

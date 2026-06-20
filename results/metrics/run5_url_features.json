@@ -1,0 +1,25 @@
+{
+  "A_original_8": {
+    "macro_f1": 0.9547,
+    "phishing_precision": 0.9474,
+    "phishing_recall": 0.9351,
+    "sms_macro_f1": 0.8448,
+    "email_macro_f1": 0.9774,
+    "sms_phishing_recall": 0.6757
+  },
+  "B_all_13": {
+    "macro_f1": 0.9534,
+    "phishing_precision": 0.9472,
+    "phishing_recall": 0.9318,
+    "sms_macro_f1": 0.8378,
+    "email_macro_f1": 0.9767,
+    "sms_phishing_recall": 0.6486
+  },
+  "new_feature_weights_phishing": {
+    "longest_url_len": 1.0303,
+    "has_lookalike": 0.8616,
+    "has_suspicious_tld": 0.6527,
+    "has_ip_url": -0.5233,
+    "max_url_dots": -0.4032
+  }
+}
